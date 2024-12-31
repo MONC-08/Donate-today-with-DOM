@@ -21,28 +21,13 @@
     <header class="">
         <div class="navbar bg-base-100 p-7 primary-color">
             <div class="navbar-start">
-                <div class="dropdown">
-
-                    <!-- <ul tabindex="0"
-                        class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
-                        <li><a>Item 1</a></li>
-                        <li>
-                            <a>Parent</a>
-                            <ul class="p-2">
-                                <li><a>Submenu 1</a></li>
-                                <li><a>Submenu 2</a></li>
-                            </ul>
-                        </li>
-                        <li><a>Item 3</a></li>
-                    </ul> -->
-                </div>
                 <a class="btn bg-green-400 text-xl font-extrabold">Blog</a>
             </div>
-            <div class="navbar-center hidden lg:flex items-center justify-center gap-2">
-                <div class=" w-1/4">
+            <div class="navbar-center lg:flex items-center justify-center gap-2">
+                <div class="w-[45%] md:w-1/4">
                     <img class="" src="./assets/myLogo.png" alt="">
                 </div>
-                <h2 class="font-extrabold text-xl">Donate Today</h2>
+                <h2 class="hidden md:block font-extrabold text-xl">Donate Today</h2>
             </div>
             <div class="navbar-end ">
                 <h2 class="font-semibold">
@@ -60,8 +45,156 @@
         </div>
     </header>
 
-    <main class="lg:max-w-6xl mx-auto border-red-500 bg-sky-200">
-        <h1>Your help is needed</h1>
+    <main class="lg:max-w-6xl mx-auto">
+
+        <!-- card div-->
+        <section class="shadow grid grid-cols-1 gap-4 py-5 bg-sky-200">
+            <!-- first card -->
+            <div class="grid grid-cols-1 md:grid-cols-2 rounded-xl border border-slate-400 p-4">
+                <!-- column 1 -->
+                <div class="p-3">
+
+                    <img class="w-full" src="./assets/feni.png" alt="">
+                </div>
+                <!-- column 2 -->
+                <div class="flex flex-col h-full justify-around px-3 py-4 md:py-0 space-y-4">
+                    <!-- coin and amount start -->
+                    <div class="flex items-center gap-1 bg-slate-500 w-1/4 py-3 px-4 rounded shadow bg-amount">
+
+                        <img class="w-[20%]" src="./assets/icons8-dollar.gif" alt="">
+                        <h4 class=" text-slate-600 font-semibold"><span>0</span> USD</h4>
+                    </div>
+                    <!-- coin and amount end-->
+
+                    <!-- details section starts -->
+                    <div>
+                        <h2 class="text-2xl font-extrabold">Donate for Flood Relief in Feni,Bangladesh</h2>
+                        <p class="font-light text-justify">
+                            The recent floods in Feni have devastated local communities, leading to severe disruption
+                            and loss. Your generous donation will help provide immediate aid, including food, clean
+                            water, and medical supplies, to those affected by this calamity. Together, we can offer
+                            crucial support and help rebuild lives in the aftermath of this disaster. Every contribution
+                            counts towards making a real difference. Please consider donating today to assist those in
+                            urgent need.
+                        </p>
+                    </div>
+                    <!-- details section ends -->
+
+                    <!-- input field and button start -->
+                    <div class="space-y-3">
+                        <div class="">
+                            <input
+                                class="placeholder:italic placeholder:text-slate-400 w-full rounded-lg border border-slate-400 pl-2 py-3 "
+                                placeholder="Write Amount to Donate" type="text ">
+
+                        </div>
+
+                        <button class="btn bg-green-400 text-xl font-extrabold w-full">Donate Now</button>
+
+                    </div>
+                    <!-- input field and button end -->
+                </div>
+
+            </div>
+
+            <!-- second card -->
+            <div class="grid grid-cols-1 md:grid-cols-2 rounded-xl border border-slate-400 p-4">
+                <!-- column 1 -->
+                <div class="p-3">
+
+                    <img class="w-full" src="./assets/noakhali.png" alt="">
+                </div>
+                <!-- column 2 -->
+                <div class="flex flex-col h-full justify-around px-3 py-4 md:py-0 space-y-4">
+                    <!-- coin and amount start -->
+                    <div class="flex items-center gap-1 bg-slate-500 w-1/4 py-3 px-4 rounded shadow bg-amount">
+
+                        <img class="w-[20%]" src="./assets/icons8-dollar.gif" alt="">
+                        <h4 class=" text-slate-600 font-semibold"><span>0</span> USD</h4>
+                    </div>
+                    <!-- coin and amount end-->
+
+                    <!-- details section starts -->
+                    <div>
+                        <h2 class="text-2xl font-extrabold">Donate for Flood Relief in Feni,Bangladesh</h2>
+                        <p class="font-light text-justify">
+                            The recent floods in Feni have devastated local communities, leading to severe disruption
+                            and loss. Your generous donation will help provide immediate aid, including food, clean
+                            water, and medical supplies, to those affected by this calamity. Together, we can offer
+                            crucial support and help rebuild lives in the aftermath of this disaster. Every contribution
+                            counts towards making a real difference. Please consider donating today to assist those in
+                            urgent need.
+                        </p>
+                    </div>
+                    <!-- details section ends -->
+
+                    <!-- input field and button start -->
+                    <div class="space-y-3">
+                        <div class="">
+                            <input
+                                class="placeholder:italic placeholder:text-slate-400 w-full rounded-lg border border-slate-400 pl-2 py-3 "
+                                placeholder="Write Amount to Donate" type="text ">
+
+                        </div>
+
+                        <button class="btn bg-green-400 text-xl font-extrabold w-full">Donate Now</button>
+
+                    </div>
+                    <!-- input field and button end -->
+                </div>
+
+            </div>
+
+            <!-- third card -->
+            <div class="grid grid-cols-1 md:grid-cols-2 rounded-xl border border-slate-400 p-4">
+                <!-- column 1 -->
+                <div class="p-3">
+
+                    <img class="w-full" src="./assets/quota-protest.png" alt="">
+                </div>
+                <!-- column 2 -->
+                <div class="flex flex-col h-full justify-around px-3 py-4 md:py-0 space-y-4">
+                    <!-- coin and amount start -->
+                    <div class="flex items-center gap-1 bg-slate-500 w-1/4 py-3 px-4 rounded shadow bg-amount">
+
+                        <img class="w-[20%]" src="./assets/icons8-dollar.gif" alt="">
+                        <h4 class=" text-slate-600 font-semibold"><span>0</span> USD</h4>
+                    </div>
+                    <!-- coin and amount end-->
+
+                    <!-- details section starts -->
+                    <div>
+                        <h2 class="text-2xl font-extrabold">Donate for Flood Relief in Feni,Bangladesh</h2>
+                        <p class="font-light text-justify">
+                            The recent floods in Feni have devastated local communities, leading to severe disruption
+                            and loss. Your generous donation will help provide immediate aid, including food, clean
+                            water, and medical supplies, to those affected by this calamity. Together, we can offer
+                            crucial support and help rebuild lives in the aftermath of this disaster. Every contribution
+                            counts towards making a real difference. Please consider donating today to assist those in
+                            urgent need.
+                        </p>
+                    </div>
+                    <!-- details section ends -->
+
+                    <!-- input field and button start -->
+                    <div class="space-y-3">
+                        <div class="">
+                            <input
+                                class="placeholder:italic placeholder:text-slate-400 w-full rounded-lg border border-slate-400 pl-2 py-3 "
+                                placeholder="Write Amount to Donate" type="text ">
+
+                        </div>
+
+                        <button class="btn bg-green-400 text-xl font-extrabold w-full">Donate Now</button>
+
+                    </div>
+                    <!-- input field and button end -->
+                </div>
+
+            </div>
+
+        </section>
+
     </main>
 
 

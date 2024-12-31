@@ -21,3 +21,7 @@ body{
 .primary-color{
     background-color: #F9F7F3;
 }
+
+.bg-amount{
+    background: rgb(243, 243, 243, 0.8);
+}
