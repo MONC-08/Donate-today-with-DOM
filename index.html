@@ -17,9 +17,10 @@
 
 </head>
 
-<body class="manrope mx-auto" data-theme="light">
-    <header class="">
-        <div class="navbar bg-base-100 p-7 primary-color">
+<body class="manrope" data-theme="light">
+    <header class=" mb-5 md:mb-10 space-y-5 md:space-x-0 ">
+
+        <div class="navbar bg-base-100 p-3 md:p-7 primary-color">
             <div class="navbar-start">
                 <a class="btn bg-green-400 text-xl font-extrabold">Blog</a>
             </div>
@@ -29,26 +30,31 @@
                 </div>
                 <h2 class="hidden md:block font-extrabold text-xl">Donate Today</h2>
             </div>
-            <div class="navbar-end ">
+            <div id="actual-balance-parent" class="navbar-end ">
                 <h2 class="font-semibold">
                     <span>
                         <i class="fa-solid fa-sack-dollar"></i>
                     </span>
-                    5000 USD
+                    <span id="actual-balance">
+                        5000
+                    </span> USD
                 </h2>
             </div>
         </div>
         <!-- navbar buttons -->
-        <div class="flex justify-center gap-4 lg:py-7">
+        <div class="flex justify-center gap-4 lg:py-7 mt-0 md:mt-4">
             <a class="btn bg-green-400 text-xl font-bold ">Donation</a>
             <a class="btn border-current text-xl font-bold">History</a>
         </div>
+
+
     </header>
 
     <main class="lg:max-w-6xl mx-auto">
 
         <!-- card div-->
-        <section class="shadow grid grid-cols-1 gap-4 py-5 bg-sky-200">
+        <section class="grid grid-cols-1 gap-4 px-3 md:px-0">
+
             <!-- first card -->
             <div class="grid grid-cols-1 md:grid-cols-2 rounded-xl border border-slate-400 p-4">
                 <!-- column 1 -->
@@ -57,12 +63,12 @@
                     <img class="w-full" src="./assets/feni.png" alt="">
                 </div>
                 <!-- column 2 -->
-                <div class="flex flex-col h-full justify-around px-3 py-4 md:py-0 space-y-4">
+                <div class="donated-amount-container flex flex-col h-full justify-around px-3 py-4 md:py-0 space-y-4">
                     <!-- coin and amount start -->
-                    <div class="flex items-center gap-1 bg-slate-500 w-1/4 py-3 px-4 rounded shadow bg-amount">
+                    <div class="flex items-center gap-1 w-1/4 py-3 px-4 rounded shadow bg-amount">
 
                         <img class="w-[20%]" src="./assets/icons8-dollar.gif" alt="">
-                        <h4 class=" text-slate-600 font-semibold"><span>0</span> USD</h4>
+                        <h4 class=" text-slate-600 font-semibold"><span class="donatedAmount">0</span> USD</h4>
                     </div>
                     <!-- coin and amount end-->
 
@@ -81,15 +87,14 @@
                     <!-- details section ends -->
 
                     <!-- input field and button start -->
-                    <div class="space-y-3">
-                        <div class="">
-                            <input
-                                class="placeholder:italic placeholder:text-slate-400 w-full rounded-lg border border-slate-400 pl-2 py-3 "
-                                placeholder="Write Amount to Donate" type="text ">
+                    <div class="donate-container space-y-3">
 
-                        </div>
+                        <input
+                            class="donate-field placeholder:italic placeholder:text-slate-400 w-full rounded-lg border border-slate-400 pl-2 py-3 "
+                            placeholder="Write Amount to Donate" type="text ">
 
-                        <button class="btn bg-green-400 text-xl font-extrabold w-full">Donate Now</button>
+
+                        <button class="btn bg-green-400 text-xl font-extrabold w-full btn-donate">Donate Now</button>
 
                     </div>
                     <!-- input field and button end -->
@@ -104,13 +109,14 @@
 
                     <img class="w-full" src="./assets/noakhali.png" alt="">
                 </div>
+
                 <!-- column 2 -->
-                <div class="flex flex-col h-full justify-around px-3 py-4 md:py-0 space-y-4">
+                <div class="donated-amount-container flex flex-col h-full justify-around px-3 py-4 md:py-0 space-y-4">
                     <!-- coin and amount start -->
-                    <div class="flex items-center gap-1 bg-slate-500 w-1/4 py-3 px-4 rounded shadow bg-amount">
+                    <div class="flex items-center gap-1 w-1/4 py-3 px-4 rounded shadow bg-amount">
 
                         <img class="w-[20%]" src="./assets/icons8-dollar.gif" alt="">
-                        <h4 class=" text-slate-600 font-semibold"><span>0</span> USD</h4>
+                        <h4 class=" text-slate-600 font-semibold"><span class="donatedAmount">0</span> USD</h4>
                     </div>
                     <!-- coin and amount end-->
 
@@ -129,15 +135,14 @@
                     <!-- details section ends -->
 
                     <!-- input field and button start -->
-                    <div class="space-y-3">
-                        <div class="">
-                            <input
-                                class="placeholder:italic placeholder:text-slate-400 w-full rounded-lg border border-slate-400 pl-2 py-3 "
-                                placeholder="Write Amount to Donate" type="text ">
+                    <div class="donate-container space-y-3">
 
-                        </div>
+                        <input
+                            class="donate-field placeholder:italic placeholder:text-slate-400 w-full rounded-lg border border-slate-400 pl-2 py-3 "
+                            placeholder="Write Amount to Donate" type="text ">
 
-                        <button class="btn bg-green-400 text-xl font-extrabold w-full">Donate Now</button>
+
+                        <button class="btn bg-green-400 text-xl font-extrabold w-full btn-donate">Donate Now</button>
 
                     </div>
                     <!-- input field and button end -->
@@ -153,12 +158,12 @@
                     <img class="w-full" src="./assets/quota-protest.png" alt="">
                 </div>
                 <!-- column 2 -->
-                <div class="flex flex-col h-full justify-around px-3 py-4 md:py-0 space-y-4">
+                <div class="donated-amount-container flex flex-col h-full justify-around px-3 py-4 md:py-0 space-y-4">
                     <!-- coin and amount start -->
-                    <div class="flex items-center gap-1 bg-slate-500 w-1/4 py-3 px-4 rounded shadow bg-amount">
+                    <div class="flex items-center gap-1 bg-amount w-1/4 py-3 px-4 rounded shadow">
 
                         <img class="w-[20%]" src="./assets/icons8-dollar.gif" alt="">
-                        <h4 class=" text-slate-600 font-semibold"><span>0</span> USD</h4>
+                        <h4 class=" text-slate-600 font-semibold"><span class="donatedAmount">0</span> USD</h4>
                     </div>
                     <!-- coin and amount end-->
 
@@ -177,15 +182,18 @@
                     <!-- details section ends -->
 
                     <!-- input field and button start -->
-                    <div class="space-y-3">
-                        <div class="">
-                            <input
-                                class="placeholder:italic placeholder:text-slate-400 w-full rounded-lg border border-slate-400 pl-2 py-3 "
-                                placeholder="Write Amount to Donate" type="text ">
+                    <div class="donate-container space-y-3">
 
-                        </div>
+                        <input
+                            class="donate-field placeholder:italic placeholder:text-slate-400 w-full rounded-lg border border-slate-400 pl-2 py-3 "
+                            placeholder="Write Amount to Donate" type="text ">
 
-                        <button class="btn bg-green-400 text-xl font-extrabold w-full">Donate Now</button>
+                        <button" class=" btn bg-green-400 text-xl font-extrabold w-full btn-donate">Donate Now</button>
+
+                            <!-- modal starts -->
+
+
+                            <!-- modal ends -->
 
                     </div>
                     <!-- input field and button end -->
@@ -197,7 +205,13 @@
 
     </main>
 
+    <footer class="bg-amount mt-7 md:mt-20 h-[70px] md:h-[150px]">
 
+    </footer>
+
+    <!-- js script -->
+    <script src="./js/home.js"></script>
+    <script src="./js/utilities.js"></script>
 </body>
 
 </html>
