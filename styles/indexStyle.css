@@ -13,11 +13,6 @@
     padding: 0;
 }
  
-body{
-    max-width: 1440px;
-    /* border: 2px solid green; */
-}
-
 .primary-color{
     background-color: #F9F7F3;
 }

@@ -25,6 +25,26 @@ for (const singleBtn of confirmDonate) {
             alert('Incorrect entry. Please try again.');
             return;
         }
+        else {
+
+            if (actualBalance <= 0) {
+                alert('Insufficient Balance.');
+                return;
+            }
+
+            const newDonatedBalance = donatedAmount + inputValue;
+            donatedTextField.innerText = newDonatedBalance;
+            console.log(newDonatedBalance)
+
+            // inputField.value = '';
+            if (actualBalance < inputValue) {
+                alert('Insufficient Balance.');
+                return;
+            }
+            const updatedBalance = actualBalance - inputValue;
+            actualBalanceTextField.innerText = updatedBalance;
+
+        }
 
     })
 }
