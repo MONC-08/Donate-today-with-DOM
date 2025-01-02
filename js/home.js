@@ -6,12 +6,14 @@ for (const singleBtn of confirmDonate) {
     singleBtn.addEventListener('click', function () {
 
         //get the input field value through a function
-        const donateContainer = singleBtn.closest('.donate-container');
-        const inputField = getValueByQuerySelector(donateContainer, '.donate-field')
+        const fieldContainer = singleBtn.closest('.donate-container');
+
+        const inputField = getValueByQuerySelector(fieldContainer, '.donate-field')
         const inputValue = Number(inputField.value);
 
         // get the inner text through a function
         const donatedContainer = singleBtn.parentElement.parentElement;
+
         const donatedTextField = getValueByQuerySelector(donatedContainer, '.donatedAmount');
         const donatedAmount = Number(donatedTextField.innerText);
         // console.table({ inputValue, donatedAmount }) //check value on a table
@@ -26,15 +28,12 @@ for (const singleBtn of confirmDonate) {
             return;
         }
         else {
-
             if (actualBalance <= 0) {
                 alert('Insufficient Balance.');
                 return;
             }
-
             const newDonatedBalance = donatedAmount + inputValue;
             donatedTextField.innerText = newDonatedBalance;
-            console.log(newDonatedBalance)
 
             // inputField.value = '';
             if (actualBalance < inputValue) {
@@ -44,9 +43,29 @@ for (const singleBtn of confirmDonate) {
             const updatedBalance = actualBalance - inputValue;
             actualBalanceTextField.innerText = updatedBalance;
 
+            // show history
+            const campaignTitle = document.querySelector('.campaign-title').innerText;
+            const parentDiv = document.getElementById('history-container');
+
+            const date = new Date();
+
+            const newDiv = document.createElement('div');
+            newDiv.classList.add('shadow', 'mx-auto', 'w-full', 'md:w-9/12', 'border-4', 'rounded-lg', 'text-center', 'p-3', 'm-2', 'bg-yellow-500');
+            newDiv.innerHTML = `
+            
+                            <h2 class="text-base md:text-xl font-bold">
+                                ${inputValue} USD is donated
+                                for ${campaignTitle}
+                            </h2>          
+                            <p class="">
+                                ${date};
+                            </p>
+            
+            `;
+            parentDiv.appendChild(newDiv);
+            // show history end
         }
 
     })
 }
-
 

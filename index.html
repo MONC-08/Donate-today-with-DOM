@@ -43,9 +43,16 @@
         </div>
         <!-- navbar buttons -->
         <div class="flex justify-center gap-4 lg:py-7 mt-0 md:mt-4">
-            <a class="btn bg-green-400 text-xl font-bold ">Donation</a>
-            <a class="btn border-current text-xl font-bold">History</a>
+            <a id="show-donation-btn" class="btn bg-green-400 border-current text-xl font-bold ">Donation</a>
+            <a id="history-btn" class="btn  text-xl font-bold">History</a>
         </div>
+
+        <!-- show history starts-->
+        <div id="history-container" class="hidden bg-green-300 ">
+            <!-- adding through DOM  -->
+        </div>
+
+        <!-- show history ends-->
 
 
     </header>
@@ -73,8 +80,9 @@
                     <!-- coin and amount end-->
 
                     <!-- details section starts -->
-                    <div>
-                        <h2 class="text-2xl font-extrabold">Donate for Flood Relief in Feni,Bangladesh</h2>
+                    <div class="campaign-container">
+                        <h2 class="campaign-title text-2xl font-extrabold">Donate for Flood Relief in Feni,Bangladesh
+                        </h2>
                         <p class="font-light text-justify">
                             The recent floods in Feni have devastated local communities, leading to severe disruption
                             and loss. Your generous donation will help provide immediate aid, including food, clean
@@ -121,8 +129,9 @@
                     <!-- coin and amount end-->
 
                     <!-- details section starts -->
-                    <div>
-                        <h2 class="text-2xl font-extrabold">Donate for Flood Relief in Feni,Bangladesh</h2>
+                    <div class="campaign-container">
+                        <h2 class="campaign-title text-2xl font-extrabold">Donate for Flood Relief in Feni,Bangladesh
+                        </h2>
                         <p class="font-light text-justify">
                             The recent floods in Feni have devastated local communities, leading to severe disruption
                             and loss. Your generous donation will help provide immediate aid, including food, clean
@@ -168,8 +177,9 @@
                     <!-- coin and amount end-->
 
                     <!-- details section starts -->
-                    <div>
-                        <h2 class="text-2xl font-extrabold">Donate for Flood Relief in Feni,Bangladesh</h2>
+                    <div class="campaign-container">
+                        <h2 class="campaign-title text-2xl font-extrabold">Donate for Flood Relief in Feni,Bangladesh
+                        </h2>
                         <p class="font-light text-justify">
                             The recent floods in Feni have devastated local communities, leading to severe disruption
                             and loss. Your generous donation will help provide immediate aid, including food, clean
@@ -206,7 +216,6 @@
     </main>
 
     <footer class="bg-amount mt-7 md:mt-20 h-[70px] md:h-[150px]">
-
     </footer>
 
     <!-- js script -->
