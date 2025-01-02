@@ -43,15 +43,25 @@ for (const singleBtn of confirmDonate) {
             const updatedBalance = actualBalance - inputValue;
             actualBalanceTextField.innerText = updatedBalance;
 
-            // show history
-            const campaignTitle = document.querySelector('.campaign-title').innerText;
-            const parentDiv = document.getElementById('history-container');
+            // show history through a function
+            showHistory(donatedContainer, inputValue);
+            // show history end
+        }
 
-            const date = new Date();
+    })
+}
 
-            const newDiv = document.createElement('div');
-            newDiv.classList.add('shadow', 'mx-auto', 'w-full', 'md:w-9/12', 'border-4', 'rounded-lg', 'text-center', 'p-3', 'm-2', 'bg-yellow-500');
-            newDiv.innerHTML = `
+// show history function
+function showHistory(donatedContainer, inputValue) {
+
+    const campaignTitle = donatedContainer.children[1].firstElementChild.innerText;
+    const parentDiv = document.getElementById('history-container');
+    const date = new Date();
+
+    const newDiv = document.createElement('div');
+    newDiv.classList.add('shadow', 'mx-auto', 'w-full', 'md:w-9/12', 'border-4', 'rounded-lg', 'text-center', 'p-3', 'm-2', 'bg-emerald-300');
+
+    newDiv.innerHTML = `
             
                             <h2 class="text-base md:text-xl font-bold">
                                 ${inputValue} USD is donated
@@ -62,10 +72,6 @@ for (const singleBtn of confirmDonate) {
                             </p>
             
             `;
-            parentDiv.appendChild(newDiv);
-            // show history end
-        }
 
-    })
+    parentDiv.appendChild(newDiv);
 }
-
