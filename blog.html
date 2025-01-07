@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- tailwind and daisyUI cdn -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.23/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- external CSS -->
+    <link rel="stylesheet" href="./styles/indexStyle.css">
+
+    <!-- font awesome kit -->
+    <script src="https://kit.fontawesome.com/90f23056d9.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+
+    <header class=" mb-5 md:mb-10 space-y-5 md:space-x-0 ">
+
+        <div class="navbar bg-base-100 p-3 md:p-7 primary-color">
+            <div class="navbar-start">
+                <a id="btn-home" class="btn bg-green-400 text-xl font-extrabold">Home</a>
+            </div>
+            <div class="navbar-center lg:flex items-center justify-center gap-2">
+                <div class="w-[45%] md:w-1/4">
+                    <img class="" src="./assets/myLogo.png" alt="">
+                </div>
+                <h2 class="hidden md:block font-extrabold text-xl">Donate Today</h2>
+            </div>
+            <div id="actual-balance-parent" class="navbar-end ">
+                <h2 class="font-semibold">
+                    <span>
+                        <i class="fa-solid fa-sack-dollar"></i>
+                    </span>
+                    <span id="actual-balance">
+                        5000
+                    </span> USD
+                </h2>
+            </div>
+        </div>
+
+    </header>
+    <main class="lg:max-w-6xl mx-auto">
+
+        <section class="p-3  space-y-3">
+
+            <div class="collapse bg-base-200">
+                <input type="radio" name="my-accordion-1" checked="checked" />
+                <div class="collapse-title text-xl font-medium">What is DOM?</div>
+                <div class="collapse-content">
+                    <p>The DOM (Document Object Model) is a programming interface for web documents. It represents the
+                        structure of a document as a tree of nodes, where each node represents part of the document,
+                        such as elements, attributes, or text.</p>
+                </div>
+            </div>
+
+            <div class="collapse bg-base-200">
+                <input type="radio" name="my-accordion-1" />
+                <div class="collapse-title text-xl font-medium">What is the purpose of the DOM?
+                </div>
+                <div class="collapse-content">
+                    <p>The DOM allows developers to interact with and manipulate HTML and XML documents programmatically
+                        using languages like JavaScript. You can use the DOM to: </p>
+                    <ul class="list-disc ml-3">
+                        <li>Modify content</li>
+                        <li>Change styles</li>
+                        <li>Add or remove elements</li>
+                        <li>Handle events</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="collapse bg-base-200">
+                <input type="radio" name="my-accordion-1" />
+                <div class="collapse-title text-xl font-medium">How can you access elements in the DOM?</div>
+                <div class="collapse-content">
+                    <p>Using JavaScript, elements can be accessed in various ways:</p>
+                    <ul class="list-disc ml-3">
+                        <li>
+                            document.getElementById('id'): Selects an element by its ID.
+                        </li>
+                        <li>
+                            document.getElementsByClassName('class'): Selects elements by their class name.</li>
+                        <li>
+                            document.getElementsByTagName('tag'): Selects elements by their tag name.
+                        </li>
+                        <li>
+                            document.querySelector('selector'): Selects the first element that matches a CSS selector.
+                        </li>
+                        <li>
+                            document.querySelectorAll('selector'): Selects all elements that match a CSS selector.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+        </section>
+
+    </main>
+    <footer class="bg-amount mt-7 md:mt-20 h-[70px] md:h-[150px]">
+    </footer>
+
+    <!-- script js -->
+    <script src="./js/blog.js"></script>
+
+</body>
+
+</html>
