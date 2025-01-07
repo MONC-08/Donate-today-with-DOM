@@ -1,5 +1,8 @@
-// donate now button
+// modal
+const modal = document.getElementById('success-modal');
+console.log(modal)
 
+// donate now button
 const confirmDonate = document.querySelectorAll('.btn-donate');
 for (const singleBtn of confirmDonate) {
 
@@ -23,7 +26,7 @@ for (const singleBtn of confirmDonate) {
         const actualBalanceTextField = getValueByQuerySelector(actualBalanceParent, '#actual-balance');
         const actualBalance = Number(actualBalanceTextField.innerText);
 
-        if (inputValue < 0 || isNaN(inputValue)) {
+        if (inputValue <= 0 || isNaN(inputValue)) {
             alert('Incorrect entry. Please try again.');
             return;
         }
@@ -32,14 +35,18 @@ for (const singleBtn of confirmDonate) {
                 alert('Insufficient Balance.');
                 return;
             }
-            const newDonatedBalance = donatedAmount + inputValue;
-            donatedTextField.innerText = newDonatedBalance;
-
-            // inputField.value = '';
-            if (actualBalance < inputValue) {
+            else if (actualBalance < inputValue) {
                 alert('Insufficient Balance.');
                 return;
             }
+
+            const newDonatedBalance = donatedAmount + inputValue;
+            donatedTextField.innerText = newDonatedBalance;
+
+            // success modal functionality
+            modal.showModal();
+
+            // inputField.value = '';
             const updatedBalance = actualBalance - inputValue;
             actualBalanceTextField.innerText = updatedBalance;
 
@@ -47,7 +54,6 @@ for (const singleBtn of confirmDonate) {
             showHistory(donatedContainer, inputValue);
             // show history end
         }
-
     })
 }
 

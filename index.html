@@ -20,6 +20,23 @@
 <body class="manrope w-full" data-theme="light">
     <header class=" mb-5 md:mb-10 space-y-5 md:space-x-0 ">
 
+        <!-- modal -->
+        <dialog id="success-modal" class="rounded-lg bg-transparent mx-auto">
+            <div class="modal-box text-center w-full">
+                <h3 class="text-lg font-bold mb-4">Congrats</h3>
+                <img class="mx-auto" src="./assets/coin.png" alt="">
+                <p class="py-4">You have donated for mankind</p>
+                <h4 class="font-bold text-xl">Successfully</h4>
+                <div class="modal-action flex justify-center">
+                    <form method="dialog">
+                        <button class="btn ">Close
+                            confirmation</button>
+                    </form>
+                </div>
+            </div>
+        </dialog>
+        <!-- modal ends -->
+
         <div class="navbar bg-base-100 p-3 md:p-7 primary-color">
             <div class="navbar-start">
                 <a class="btn bg-green-400 text-xl font-extrabold">Blog</a>
@@ -51,13 +68,11 @@
         <div id="history-container" class="hidden">
             <!-- adding through DOM  -->
         </div>
-
         <!-- show history ends-->
-
 
     </header>
 
-    <main class="lg:max-w-6xl mx-auto">
+    <main class="relative lg:max-w-6xl mx-auto">
 
         <!-- card div-->
         <section class="grid grid-cols-1 gap-4 px-3 md:px-0">
@@ -190,11 +205,6 @@
                             placeholder="Write Amount to Donate" type="text ">
 
                         <button" class=" btn bg-green-400 text-xl font-extrabold w-full btn-donate">Donate Now</button>
-
-                            <!-- modal starts -->
-
-
-                            <!-- modal ends -->
 
                     </div>
                     <!-- input field and button end -->
